@@ -1,0 +1,14 @@
+// ion-item {
+//     --background: var(--custom);
+// }
+
+ion-card {
+    ion-card-subtitle {
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p{
+        white-space: normal;
+    }
+}

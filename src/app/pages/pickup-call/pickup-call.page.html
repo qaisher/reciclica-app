@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pickup Call</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg">
+
+  <ion-card>
+    <ion-card-content>
+      <p>Address: Central Street, 142</p>
+      <p>Landmark: Capitol Hill</p>
+      <p>Pincode: 12443</p>
+      <p>City: XYZ</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-item lines="inset">
+      <ion-label position="floating">Notes</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-list>
+
+  <ion-button color="success" size="full" (click) = "createPickupCall()">Create Pickup Call</ion-button>
+</ion-content>

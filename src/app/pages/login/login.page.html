@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="flex-center">
+    <form [formGroup]="loginForm">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Login</ion-card-title>
+
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" formControlName="email"></ion-input>
+          </ion-item>
+
+          <!-- <ion-label color="danger"
+            *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.required"><small>* Email is
+              required</small></ion-label> -->
+
+          <!-- <app-error-message *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.required" message="* Email
+              is required"></app-error-message> -->
+
+          <app-error-message [field]="loginForm.get('email')" error = "required" message="* Email
+              is required"></app-error-message>
+
+          <!-- <ion-label color="danger"
+            *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.email"><small>* Email
+              is invalid</small></ion-label> -->
+
+          <!-- <app-error-message *ngIf="loginForm.get('email').touched && loginForm.get('email').errors?.email" message="* Email
+              is invalid"></app-error-message> -->
+
+          <app-error-message [field]="loginForm.get('email')" error = "email" message="* Email
+              is invalid"></app-error-message>
+
+
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="password" formControlName="password"></ion-input>
+          </ion-item>
+
+          <!-- <ion-label color="danger"
+            *ngIf="loginForm.get('password').touched && loginForm.get('password').errors?.required"><small>* Password is
+              required</small></ion-label> -->
+
+          <!-- <app-error-message *ngIf="loginForm.get('password').touched && loginForm.get('password').errors?.required"
+            message="* Password
+              is required"></app-error-message> -->
+
+          <app-error-message [field]="loginForm.get('password')" error = "required" message="* Password
+              is required"></app-error-message>
+
+          <br>
+
+          <ion-button color="dark" fill="clear" size="small" [disabled]="!loginForm.get('email').valid" (click) = "forgotEmailPassword()" id="recoverPasswordButton">Forgot
+            email/password</ion-button>
+          <ion-button color="success" size="full" (click)='login()' [disabled]="!loginForm.valid" id="loginButton">Login</ion-button>
+          <ion-button color="success" size="full" fill="clear" (click)="register()">Register</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </form>
+  </div>
+</ion-content>

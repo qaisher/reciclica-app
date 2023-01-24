@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Pickup Calls</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <app-call-cards [hasFooter]="false" [hasHeader]="false" status = "On hold" updatedAt = "23/12/2022 23:43" createdOn = "22/12/2022" notes = "We have two bags that are full. One with plastic and other with glass."></app-call-cards>
+
+  <app-call-cards [hasFooter]="false" [hasHeader]="false" status = "Processing" updatedAt = "30/12/2022 11:14" createdOn = "29/12/2022" notes = "One of three tasks completed."></app-call-cards>
+
+  <app-call-cards [hasFooter]="false" [hasHeader]="false" status = "Finished" updatedAt = "03/01/2023 09:58" createdOn = "01/01/2023" notes = "" value = "$15,000"></app-call-cards>
+  
+</ion-content>
